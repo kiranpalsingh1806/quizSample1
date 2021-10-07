@@ -31,10 +31,11 @@
             <input type="radio" id="option4Q1" name="optionsQ1" value="">
             <label for="option4Q1">28 Sept</label><br><br>
 
-            <button onclick="checkSolutionQ1()">Submit</button>
+            <!-- <button onclick="checkSolutionQ1()">Submit</button> -->
 
             <p id="summaryQ1"></p>
             <p id= "explanationQ1"></p>
+            <hr>
         </div>
         <!-- Question Ends Here -->
 
@@ -51,10 +52,11 @@
             <input type="radio" id="option4Q2" name="optionsQ2" value="">
             <label for="option4Q2">Judina</label><br><br>
 
-            <button onclick="checkSolutionQ2()">Submit</button>
+            <!-- <button onclick="checkSolutionQ2()">Submit</button> -->
 
             <p id="summaryQ2"></p>
             <p id= "explanationQ2"></p>
+            <hr>
         </div>
         <!-- Question Ends Here -->
 
@@ -71,10 +73,11 @@
             <input type="radio" id="option4Q3" name="optionsQ3" value="">
             <label for="option4Q3">Dr. B.R Ambedkar</label><br><br>
 
-            <button onclick="checkSolutionQ3()">Submit</button>
+            <!-- <button onclick="checkSolutionQ3()">Submit</button> -->
 
             <p id="summaryQ3"></p>
             <p id= "explanationQ3"></p>
+            <hr>
         </div>
         <!-- Question Ends Here -->
 
@@ -91,10 +94,11 @@
             <input type="radio" id="option4Q4" name="optionsQ4" value="">
             <label for="option4Q4">Assam</label><br><br>
 
-            <button onclick="checkSolutionQ4()">Submit</button>
+            <!-- <button onclick="checkSolutionQ4()">Submit</button> -->
 
             <p id="summaryQ4"></p>
             <p id= "explanationQ4"></p>
+            <hr>
         </div>
         <!-- Question Ends Here -->
 
@@ -111,12 +115,18 @@
             <input type="radio" id="option4Q5" name="optionsQ5" value="">
             <label for="option4Q5">129th</label><br><br>
 
-            <button onclick="checkSolutionQ5()">Submit</button>
+            <!-- <button onclick="checkSolutionQ5()">Submit</button> -->
 
             <p id="summaryQ5"></p>
             <p id= "explanationQ5"></p>
+            
+            <button id="submitQuiz" onclick="submitQuiz()"> Submit</button>
+            <p id="quizSummary"></p>
+            
         </div>
         <!-- Question Ends Here -->
+
+        
 
         <script>
             function checkSolutionQ1(){
@@ -197,6 +207,30 @@
                     document.getElementById("summaryQ5").style.color = "red";
                     document.getElementById("explanationQ5").innerHTML = "The 2021 Durand Cup was the 130th edition of Durand Cup, the oldest football tournament in Asia.";
                 }
+            }
+
+            function submitQuiz(){
+                checkSolutionQ1();
+                checkSolutionQ2();
+                checkSolutionQ3();
+                checkSolutionQ4();
+                checkSolutionQ5();
+                var x1 = document.getElementById("option3Q1").checked;
+                var x2 = document.getElementById("option3Q2").checked;
+                var x3 = document.getElementById("option2Q3").checked;
+                var x4 = document.getElementById("option4Q4").checked;
+                var x5 = document.getElementById("option2Q5").checked;
+
+                var count = 0;
+                if(x1 == true) count++;
+                if(x2 == true) count++;
+                if(x3 == true) count++;
+                if(x4 == true) count++;
+                if(x5 == true) count++;
+
+                document.getElementById("quizSummary").innerHTML = " Congratulations!! Your score: ";
+                document.getElementById("quizSummary").innerHTML += count;
+
             }
         </script>
 
