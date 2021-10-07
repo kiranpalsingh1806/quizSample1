@@ -78,6 +78,46 @@
         </div>
         <!-- Question Ends Here -->
 
+         <!-- Question4 -->
+         <div style="width: 50%; margin: 0 auto;" id="questionQ4">
+            <p id="question">4. Which state instituted the famous Lokapriya Gopinath Bordolio Award?</p>
+        
+            <input type="radio" id="option1Q4" name="optionsQ4" value="">
+            <label for="option1Q4">Maharashtra</label><br>
+            <input type="radio" id="option2Q4" name="optionsQ4" value="">
+            <label for="option2Q4">Gujarat</label><br>
+            <input type="radio" id="option3Q4" name="optionsQ4" value="">
+            <label for="option3Q4">West Bengal</label><br>
+            <input type="radio" id="option4Q4" name="optionsQ4" value="">
+            <label for="option4Q4">Assam</label><br><br>
+
+            <button onclick="checkSolutionQ4()">Submit</button>
+
+            <p id="summaryQ4"></p>
+            <p id= "explanationQ4"></p>
+        </div>
+        <!-- Question Ends Here -->
+
+        <!-- Question5 -->
+        <div style="width: 50%; margin: 0 auto;" id="questionQ5">
+            <p id="question">Which edition of Durand Cup was played in 2021?</p>
+        
+            <input type="radio" id="option1Q5" name="optionsQ5" value="">
+            <label for="option1Q5">128th</label><br>
+            <input type="radio" id="option2Q5" name="optionsQ5" value="">
+            <label for="option2Q5">130th</label><br>
+            <input type="radio" id="option3Q5" name="optionsQ5" value="">
+            <label for="option3Q5">132th</label><br>
+            <input type="radio" id="option4Q5" name="optionsQ5" value="">
+            <label for="option4Q5">129th</label><br><br>
+
+            <button onclick="checkSolutionQ5()">Submit</button>
+
+            <p id="summaryQ5"></p>
+            <p id= "explanationQ5"></p>
+        </div>
+        <!-- Question Ends Here -->
+
         <script>
             function checkSolutionQ1(){
                 var x = document.getElementById("option3Q1").checked;
@@ -124,6 +164,38 @@
                     document.getElementById("summaryQ3").innerHTML = "Incorrect answer!!";
                     document.getElementById("summaryQ3").style.color = "red";
                     document.getElementById("explanationQ3").innerHTML = "Sir Osborne Smith was the first Governor of the Reserve Bank of India. He served on this post from 1935 to 1937.";
+                }
+            }
+
+            function checkSolutionQ4(){
+                var x = document.getElementById("option4Q4").checked;
+                // document.getElementById("summary").innerHTML = x;
+                if( x == true)
+                {
+                    document.getElementById("summaryQ4").innerHTML = "Correct answer!!";
+                    document.getElementById("summaryQ4").style.color = "green";
+                    document.getElementById("explanationQ4").innerHTML = "The biennial Lokapriya Gopinath Bordoloi Award was instituted by the Government of Assam in 1993 in the memory of the first Chief Minister of Assam Bharat Ratna Lokapriya Gopinath Bordoloi.";
+                }
+                else{
+                    document.getElementById("summaryQ4").innerHTML = "Incorrect answer!!";
+                    document.getElementById("summaryQ4").style.color = "red";
+                    document.getElementById("explanationQ4").innerHTML = "The biennial Lokapriya Gopinath Bordoloi Award was instituted by the Government of Assam in 1993 in the memory of the first Chief Minister of Assam Bharat Ratna Lokapriya Gopinath Bordoloi.";
+                }
+            }
+
+            function checkSolutionQ5(){
+                var x = document.getElementById("option2Q5").checked;
+                // document.getElementById("summary").innerHTML = x;
+                if( x == true)
+                {
+                    document.getElementById("summaryQ5").innerHTML = "Correct answer!!";
+                    document.getElementById("summaryQ5").style.color = "green";
+                    document.getElementById("explanationQ5").innerHTML = "The 2021 Durand Cup was the 130th edition of Durand Cup, the oldest football tournament in Asia.";
+                }
+                else{
+                    document.getElementById("summaryQ5").innerHTML = "Incorrect answer!!";
+                    document.getElementById("summaryQ5").style.color = "red";
+                    document.getElementById("explanationQ5").innerHTML = "The 2021 Durand Cup was the 130th edition of Durand Cup, the oldest football tournament in Asia.";
                 }
             }
         </script>
