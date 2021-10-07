@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Document
+        </title>
+        <style>
+           #titleQuiz{
+               color: brown;
+               font-weight: 1000;
+               text-align: center;
+           }
+        </style>
+    </head>
+    <body>
+        <div style="width: 50%; margin: 0 auto;" id="titleQuiz" > General Knowledge Quiz</div>
+
+        <!-- Question1 -->
+        <div style="width: 50%; margin: 0 auto;" id="questionQ1">
+            <p id="question"> 1. On which date, the World Tourism Day is celebrated?</p>
+        
+            <input type="radio" id="option1Q1" name="optionsQ1" value="">
+            <label for="option1Q1">14 Sept</label><br>
+            <input type="radio" id="option2Q1" name="optionsQ1" value="">
+            <label for="option2Q1">13 Sept</label><br>
+            <input type="radio" id="option3Q1" name="optionsQ1" value="">
+            <label for="option3Q1">27 Sept</label><br>
+            <input type="radio" id="option4Q1" name="optionsQ1" value="">
+            <label for="option4Q1">28 Sept</label><br><br>
+
+            <button onclick="checkSolutionQ1()">Submit</button>
+
+            <p id="summaryQ1"></p>
+            <p id= "explanationQ1"></p>
+        </div>
+        <!-- Question Ends Here -->
+
+        <!-- Question2 -->
+        <div style="width: 50%; margin: 0 auto;" id="questionQ2">
+            <p id="question">2. What is the local fermented drink made with rice, brewed by the Dimasa community in Assam?</p>
+        
+            <input type="radio" id="option1Q2" name="optionsQ2" value="">
+            <label for="option1Q2">Pudina</label><br>
+            <input type="radio" id="option2Q2" name="optionsQ2" value="">
+            <label for="option2Q2">Pudima</label><br>
+            <input type="radio" id="option3Q2" name="optionsQ2" value="">
+            <label for="option3Q2">Judima</label><br>
+            <input type="radio" id="option4Q2" name="optionsQ2" value="">
+            <label for="option4Q2">Judina</label><br><br>
+
+            <button onclick="checkSolutionQ2()">Submit</button>
+
+            <p id="summaryQ2"></p>
+            <p id= "explanationQ2"></p>
+        </div>
+        <!-- Question Ends Here -->
+
+        <!-- Question3 -->
+        <div style="width: 50%; margin: 0 auto;" id="questionQ3">
+            <p id="question">3. Who was the first Governor of Reserve Bank of India from 1935 to 1937?</p>
+        
+            <input type="radio" id="option1Q3" name="optionsQ3" value="">
+            <label for="option1Q3">C.D Deskmukh</label><br>
+            <input type="radio" id="option2Q3" name="optionsQ3" value="">
+            <label for="option2Q3">Osborne Smith</label><br>
+            <input type="radio" id="option3Q3" name="optionsQ3" value="">
+            <label for="option3Q3">Lakshmi Kant Jha</label><br>
+            <input type="radio" id="option4Q3" name="optionsQ3" value="">
+            <label for="option4Q3">Dr. B.R Ambedkar</label><br><br>
+
+            <button onclick="checkSolutionQ3()">Submit</button>
+
+            <p id="summaryQ3"></p>
+            <p id= "explanationQ3"></p>
+        </div>
+        <!-- Question Ends Here -->
+
+        <script>
+            function checkSolutionQ1(){
+                var x = document.getElementById("option3Q1").checked;
+                // document.getElementById("summary").innerHTML = x;
+                if( x == true)
+                {
+                    document.getElementById("summaryQ1").innerHTML = "Correct answer!!";
+                    document.getElementById("summaryQ1").style.color = "green";
+                    document.getElementById("explanationQ1").innerHTML = "It is celebrated on 27th September since 1980 every year to raise awareness about the impact of tourism on the life of people and community.";
+                }
+                else{
+                    document.getElementById("summaryQ1").innerHTML = "Incorrect answer!!";
+                    document.getElementById("summaryQ1").style.color = "red";
+                    document.getElementById("explanationQ1").innerHTML = "It is celebrated on 27th September since 1980 every year to raise awareness about the impact of tourism on the life of people and community.";
+                }
+            }
+
+            function checkSolutionQ2(){
+                var x = document.getElementById("option3Q2").checked;
+                // document.getElementById("summary").innerHTML = x;
+                if( x == true)
+                {
+                    document.getElementById("summaryQ2").innerHTML = "Correct answer!!";
+                    document.getElementById("summaryQ2").style.color = "green";
+                    document.getElementById("explanationQ2").innerHTML = "Judima is a local fermented drink made with rice, brewed by the Dimasa community in Assam. It derives its name from words ju which means wine and Dima means ‘belonging to the Dimasa’";
+                }
+                else{
+                    document.getElementById("summaryQ2").innerHTML = "Incorrect answer!!";
+                    document.getElementById("summaryQ2").style.color = "red";
+                    document.getElementById("explanationQ2").innerHTML = "Judima is a local fermented drink made with rice, brewed by the Dimasa community in Assam. It derives its name from words ju which means wine and Dima means ‘belonging to the Dimasa’";
+                }
+            }
+
+            function checkSolutionQ3(){
+                var x = document.getElementById("option2Q3").checked;
+                // document.getElementById("summary").innerHTML = x;
+                if( x == true)
+                {
+                    document.getElementById("summaryQ3").innerHTML = "Correct answer!!";
+                    document.getElementById("summaryQ3").style.color = "green";
+                    document.getElementById("explanationQ3").innerHTML = "Sir Osborne Smith was the first Governor of the Reserve Bank of India. He served on this post from 1935 to 1937.";
+                }
+                else{
+                    document.getElementById("summaryQ3").innerHTML = "Incorrect answer!!";
+                    document.getElementById("summaryQ3").style.color = "red";
+                    document.getElementById("explanationQ3").innerHTML = "Sir Osborne Smith was the first Governor of the Reserve Bank of India. He served on this post from 1935 to 1937.";
+                }
+            }
+        </script>
+
+    </body>
+</html>
